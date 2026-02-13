@@ -623,7 +623,7 @@ export default function InvoicingApp() {
                         type="text"
                         value={item.description}
                         onChange={(e) => updateItem(item.id, 'description', e.target.value)}
-                        onFocus={() => setShowServicePicker(item.id)}
+                        onFocus={() => !item.description && setShowServicePicker(item.id)}
                         placeholder="Izvēlies pakalpojumu vai raksti pats..."
                         style={{
                           width: '100%',
